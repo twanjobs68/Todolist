@@ -1,9 +1,16 @@
 import React from 'react';
 
-function ToDo(props) {
+function ToDo({thingstodo}){
     return (
-        <div>
-            
+        <div class="todobox">
+            <input type ="checkbox"/>
+            texttDecoration: thingstodo.finshed ? "line-through" : null
+            }}
+            >
+            {thingstodo.whattodo}
+            </li>
+
+        <button> Submit </button>
         </div>
     );
 }

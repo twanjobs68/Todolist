@@ -20,14 +20,16 @@ function FormToDo(getToDo) {
 
     function handleSubmit(inputupdate){
        inputupdate.preventDefault();
+
        {/*if statement will use TRIM function to get rid of whitespace from both sides of input-includes spaces, tabs*/}
      {/* , carriage returns, line terminatiors*/}
+
        if(thingstodo.whatToDo.trim()){
              getToDo({thingsToDo});
           {/*reset thingToDo*/}
         setThingsToDo({thingsToDo,whatToDo: ""});
        }
-    )
+    }
 
     return (
         <div>

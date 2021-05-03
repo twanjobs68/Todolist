@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './App.css';
-import FromToDo from './Components/FromToDo';
+import FormToDo from './Components/FromToDo';
+import ToDoList from '.Components/TodoList';
 
 function App() {
 
