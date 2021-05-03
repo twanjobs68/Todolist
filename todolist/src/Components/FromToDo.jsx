@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FormToDo9() {
+function FormToDo(getToDo) {
     const[thingstodo, setThingsToDo] = useState({
 
     
@@ -15,6 +15,13 @@ function FormToDo9() {
         setThingsToDo({thingstodo,whatToDo:inputupdate.target.value});
 
     }
+    
+    {/*when userinput submits form add forms todo from state to list of Todo's*/}
+
+    functionhandleSubmit(thingsToDo)(
+        thingsToDo.preventDefault();
+    )
+
     return (
         <div>
             <form>
@@ -28,4 +35,4 @@ function FormToDo9() {
     );
 }
 
-export default FormToDo;
+export default FromToDo;

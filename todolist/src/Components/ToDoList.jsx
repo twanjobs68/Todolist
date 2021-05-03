@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ToDoList(props) {
+function ToDoList() {
     return (
         <div>
             

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './App.css';
+import FromToDo from './Components/FromToDo';
 
 function App() {
 
@@ -9,12 +10,16 @@ function App() {
 
   const[thingstodo, setThingsToDo] = useState([]);
 
+  function getToDo(thingsToDo){
 
+    setThingsToDo([thingsToDo,thingsToDo]);
+  }
 
 
   return (
     <div className="App">
-<Toddo/>
+      {/*the below code addition to ToDo component will pass the function getToDo to the ToDo component*/}
+      <FromToDo getToDo={getToDo}/>
     </div>
   );
 }
