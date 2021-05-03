@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Toddolist(props) {
+function ToDoList(props) {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function Toddolist(props) {
     );
 }
 
-export default Toddolist;
+export default ToDoList;
