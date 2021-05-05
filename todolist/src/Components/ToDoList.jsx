@@ -1,5 +1,6 @@
 import React from 'react';
-import Todo from './Todo';
+import ToDo from './Components/Todo';
+
 {/*map over todo and return todo object as prop with unique key */}
 function ToDoList({todo }) {
     return (

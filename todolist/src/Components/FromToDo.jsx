@@ -1,4 +1,5 @@
 import React from 'react';
+import ToDo from './Components/Todo';
 
 
 {/*function to keep track of user input- function receives prop addToDo(destructure the addToDo function from props parament*/ }

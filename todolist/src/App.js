@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 import FromToDo from './Components/Fromtodo';
 import ToDoList from './Components/Todolist';
+import ToDo from  './Components/Todo'
 
 function App() {
 
