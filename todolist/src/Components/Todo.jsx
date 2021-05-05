@@ -1,18 +1,23 @@
 import React from 'react';
 
-function ToDo({thingstodo}){
+{/*check box, list with todo task and delete button elements*/}
+{/* display flex to align todo items horizontally}*/}
+{/*list items will get textDecoration property of line through if boolean finished is trye*/}
+function ToDo({todo}){
     return (
-        <div class="todobox">
-            <input type ="checkbox"/>
-            texttDecoration: thingstodo.finshed ? "line-through" : null
-            }}
-            >
-            {thingstodo.whattodo}
+        <div style={{display: "flex"}}>
+        <input type="checkbox" />
+            <li style={{
+                color: "green",
+                texttDecoration: todo.finshed ? "line-through" : null
+              }} >
+                {todo.task}
             </li>
 
-        <button> Submit </button>
+              <button type= "submit"> Submit </button>
+
         </div>
     );
 }
 
-export default ToDo;
+ export default ToDo;

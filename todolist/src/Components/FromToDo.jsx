@@ -1,48 +1,62 @@
 import React from 'react';
 
-function FormToDo(getToDo) {
-    const[thingstodo, setThingsToDo] = useState({
 
-    
-      
-      finished: "false",
-      whatToDo: ""
-    });
+{/*function to keep track of user input- function receives prop addToDo(destructure the addToDo function from props parament*/ }
+{/*when user submits forms we want to add forms todo from the state to list of todos*/ }
+function FromToDo(addToDo) {
+  const [todo, setToDo] = useState({
 
-    {/*the following function of  will take care of when user types in todo so we can traqck it in state. Will update todo*/}
-    {/*parameter is the event of inputupdate and will be used to update old value of state*/}
-    function takeCareofInputUpdate(inputupdate) {
-        setThingsToDo({thingstodo,whatToDo:inputupdate.target.value});
 
+    id: "taskcnt",
+    task: "",
+    finished: "false"
+
+  });
+  {/*above statements*/ }
+  {/* state defined as todo and setToDo*/ }
+  {/*task =describe to do ite*/ }
+  {/*finished keeps track of item marked complete*/ }
+
+
+  {/*the following function will handle when user types input for todo so I can track it in state. Will update task property*/ }
+  {/*function takes in event as parameter. Function will update task property on todo object. SetTodo is called and passed new object that will be*/ }
+  {/*updated with new target value which is new input todo from user*/ }
+  function handleTaskInputChange(inputupdate) {
+    setToDo({ todo, task: e.target.value });
+
+
+    {/*function will take event from the DOM and execute when form is submitted*/ }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      {/*If stgatement below will only get executed if the todo task is not empty and*/ }
+      {/*  will call the TRIM function to get rid of whitespace from both sides of input-includes spaces*/ }
+      {/* , carriage returns, line terminatiors*/ }
+      {/*New addToDo function called with object of todo and updated ID property*/ }
+      {/*ID property is......*/ }
+
+      if (todo.task.trim()) {
+        addToDo({ ...todo, id});
+
+        {/*reset form with new object and updated task property*/ }
+        setToDo({...todo, task: "" });
+      }
     }
-    
-    {/*when userinput submits form add forms todo from state to list of Todo's*/}
 
-    function handleSubmit(inputupdate){
-       inputupdate.preventDefault();
-
-       {/*if statement will use TRIM function to get rid of whitespace from both sides of input-includes spaces, tabs*/}
-     {/* , carriage returns, line terminatiors*/}
-
-       if(thingstodo.whatToDo.trim()){
-             getToDo({thingsToDo});
-          {/*reset thingToDo*/}
-        setThingsToDo({thingsToDo,whatToDo: ""});
-       }
-    }
-
+    {/*onChange will execute every time the new input value changes and input is set to todo task which is updated when handletaskchange is called*/ }
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input name="task"
-                type="text"
-                value={thingstodo.whatToDo}
-                onChange={takeCareofInputUpdate}/>
-                <button type ="submit" button />
-            </form>
-            
-        </div>
-    );
-}
+      <div>
+        <form onSubmit={handleSubmit}>
+          <input name="task"
+            type="text"
+            value={todo.taqsk}
+            onChange={handleTaskInputChange} />
+          <button type="submit" button />
+        </form>
 
-export default FormToDo;
+      </div>
+    );
+  }
+}
+  export default FromToDo;

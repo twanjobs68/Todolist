@@ -1,12 +1,12 @@
 import React from 'react';
-import ToDo from './Todo';
-
-function ToDoList({ thingsToDo }) {
+import Todo from './Todo';
+{/*map over todo and return todo object as prop with unique key */}
+function ToDoList({todo }) {
     return (
         <div>
             <ul>
-                {thingsToDo.map(thingstodo =>(
-                    <thingsToDo key ={thingstodo =thingstodo}
+                {todo.map(todo =>(
+                    <Todo key ={todo.id} todo={todo}/>
                 ))}
             </ul>
         </div>
