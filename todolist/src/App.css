@@ -1,9 +1,24 @@
-.App {
-  text-align: center;
+.App{
+  background-color: darkgoldenrod;
 }
 
-div{
+.container{
   display: flex;
-  color: purple
+  width: 600;
+  margin: "auto";
+  padding: 100;
+  text-align: center;
   
+}
+
+.ul{
+  height: 100vbh;
+  width: 100;
+  margin: "auto";
+  padding: 125;
+  text-align: center;
+
+}
+.delButton{
+  background-color: darkgoldenrod;
 }
