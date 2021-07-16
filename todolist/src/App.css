@@ -1,5 +1,5 @@
 .App{
-  background-color: darkgoldenrod;
+  background-color :purple;
 }
 
 .container{
@@ -8,17 +8,25 @@
   margin: "auto";
   padding: 100;
   text-align: center;
+  border: 5px solid green;
   
 }
 
-.ul{
-  height: 100vbh;
+/* .ul{
+  height: 100vh;
   width: 100;
   margin: "auto";
   padding: 125;
-  text-align: center;
+  text-align: center; */
 
-}
+/* }
 .delButton{
-  background-color: darkgoldenrod;
+  background: rgb(225, 228, 41);
+  height: vh;
+
+} */
+.add-btn{
+  background-color: hotpink;
+  width: 40px;
+  height: 40px;
 }

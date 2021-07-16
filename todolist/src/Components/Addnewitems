@@ -1,0 +1,25 @@
+import React from 'react';
+
+function addItem() {
+    //creates item with unique id to so I can identify each input item. calls math.random function to generate a random number
+    //will use "slice" method to return newItem as an object in an array
+    const newItem = {
+        id: 1 + Math.random(),
+        value: this.state.newItem.slice()
+      };
+  
+      //current copy of list items and use the spread operator to add it on to the list
+      const list = [...this.state.list];
+  
+      //add new itemm to the list.
+      list.push(newItem);
+  
+      //update the state with list and  reset item input so text refreshes newitem input
+      this.setState({
+        list,
+        newItem: ""
+      });
+   
+}
+
+export default addItem;
